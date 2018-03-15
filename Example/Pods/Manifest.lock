@@ -1,0 +1,16 @@
+PODS:
+  - ENTRefreshControl (0.1.0)
+
+DEPENDENCIES:
+  - ENTRefreshControl (from `../`)
+
+EXTERNAL SOURCES:
+  ENTRefreshControl:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ENTRefreshControl: 38fc0abefd8000dd4a2234a623e56807b8908e9b
+
+PODFILE CHECKSUM: fb8129e5102e269fe9a4f02b803c57e1e9a2c9ca
+
+COCOAPODS: 1.4.0

@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ENTRefreshControl_Example' do
+  pod 'ENTRefreshControl', :path => '../'
+
+  target 'ENTRefreshControl_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

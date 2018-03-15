@@ -1,0 +1,6 @@
+framework module ENTRefreshControl {
+  umbrella header "ENTRefreshControl-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ENTRefreshControl'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ENTRefreshControl.'
+  s.summary          = 'Use External Refresh Control with ENTRefreshControl.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,18 +18,18 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+Every things with `ENTRefreshControl` works just the same as native `UIRefreshControl` but with few changes.
+                                        DESC
 
-  s.homepage         = 'https://github.com/etDev24/ENTRefreshControl'
+  s.homepage         = 'https://github.com/syedqamara/ENTRefreshControl'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'etDev24' => 'syedqamar.a1@gmail.com' }
-  s.source           = { :git => 'https://github.com/etDev24/ENTRefreshControl.git', :tag => s.version.to_s }
+  s.author           = { 'syedqamara' => 'syedqamar.a1@gmail.com' }
+  s.source           = { :git => 'https://github.com/syedqamara/ENTRefreshControl.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
+  s.swift_version = "3.2"
   s.source_files = 'ENTRefreshControl/Classes/**/*'
   
   # s.resource_bundles = {

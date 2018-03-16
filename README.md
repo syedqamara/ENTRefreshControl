@@ -34,3 +34,24 @@ refreshControl.startRotate // to start your animation
 refreshControl.stopRotate // to end your animation
 ```
 >starting animation without calling `refreshControl.beginRefreshing()` will give you `false` when you will triger `refreshControl.isRefreshing()` function.
+
+
+
+4: You can now register a completion handler to get current state of Control which will invoke when ever an event is occur on refresh control.
+
+```
+refControl.pullState = { state, frame in
+    //state is an enumeration with name PullState and defined below.
+    //frame is the current of of refreshControl with respect to its superview.
+}
+```
+`PullState` is an enumeration which contains information about the state of refresh control's pulling state. E.g User is pulling downward, upward, isLoading or none.
+
+```
+public enum PullState{
+    case up
+    case down
+    case loading
+    case none
+}
+```

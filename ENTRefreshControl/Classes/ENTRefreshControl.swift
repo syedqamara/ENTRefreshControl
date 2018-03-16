@@ -12,7 +12,13 @@ public enum Speed: CGFloat {
     case half = 1.2
     case double = 0.5
 }
-
+public enum PullState{
+    case up
+    case down
+    case loading
+    case none
+}
+public typealias ENTRefreshControlPullStateResponse = (PullState, CGRect)->()
 public class ENTRefreshControl: UIRefreshControl {
     
     //MARK: - Private Properties/Methods
@@ -21,20 +27,32 @@ public class ENTRefreshControl: UIRefreshControl {
     fileprivate var yAxis: CGFloat {
         return frame.origin.y
     }
+    fileprivate var currentState = PullState.none
     fileprivate func rotateView(_ angle: CGFloat, _ view: UIView) {
         let radians = angle / 180.0 * CGFloat(Double.pi)
         let rotation = self.transform.rotated(by: radians)
         view.transform = rotation
     }
+    var previous: CGFloat = 0
     fileprivate func changeLoaderViewsDirection(_ frame: CGRect) {
         if let view = loaderView {
             if !isAnimating {
-                if yAxis < -3 {
-                    rotateView(yAxis / rotationSpeed.rawValue, view)
-                    view.isHidden = false
+                if let state = self.pullState {
+                    if yAxis > previous {
+                        currentState = .up
+                    }else {
+                        currentState = .down
+                    }
+                    previous = yAxis
+                    invokeCurrentState
                 }else {
-                    rotateView(0, view)
-                    view.isHidden = true
+                    if yAxis < -3 {
+                        rotateView(yAxis / rotationSpeed.rawValue, view)
+                        view.isHidden = false
+                    }else {
+                        rotateView(0, view)
+                        view.isHidden = true
+                    }
                 }
             }
         }
@@ -87,16 +105,23 @@ public class ENTRefreshControl: UIRefreshControl {
             loaderView?.layer.removeAnimation(forKey: kRotationAnimationKey)
         }
     }
-    
+    public var pullState: ENTRefreshControlPullStateResponse?
     
     
     //MARK: - Public Overrides
+    var invokeCurrentState: Void {
+        if let state = self.pullState {
+            state(self.currentState, frame)
+        }
+    }
     override public func beginRefreshing() {
+        currentState = .loading
         loaderView?.isHidden = false
         startRotate
         super.beginRefreshing()
         shouldEndRefresh = true
         isAnimating = true
+        invokeCurrentState
         endRefreshing()
     }
     override public  var isRefreshing: Bool {
@@ -108,10 +133,12 @@ public class ENTRefreshControl: UIRefreshControl {
             shouldEndRefresh = false
             return
         }
+        currentState = .none
         loaderView?.isHidden = true
         stopRotate
         isAnimating = false
         super.endRefreshing()
+        invokeCurrentState
     }
     override public init() {
         super.init()

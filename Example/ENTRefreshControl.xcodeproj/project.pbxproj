@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		231BF38F49BAA6669A12C4F7 /* Pods-ENTRefreshControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ENTRefreshControl_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ENTRefreshControl_Example/Pods-ENTRefreshControl_Example.release.xcconfig"; sourceTree = "<group>"; };
-		566306A5E79EB0F0E4900A91 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		566306A5E79EB0F0E4900A91 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ENTRefreshControl_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ENTRefreshControl_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,8 +44,8 @@
 		79D661B6B7EEFFDE81A52DF0 /* Pods_ENTRefreshControl_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ENTRefreshControl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA2719B888DCDC913971478 /* Pods-ENTRefreshControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ENTRefreshControl_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ENTRefreshControl_Example/Pods-ENTRefreshControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9893D26776FD428F32DFC8E6 /* Pods-ENTRefreshControl_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ENTRefreshControl_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ENTRefreshControl_Tests/Pods-ENTRefreshControl_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		A0E6EF328D200BB62C93700A /* ENTRefreshControl.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ENTRefreshControl.podspec; path = ../ENTRefreshControl.podspec; sourceTree = "<group>"; };
-		C91BD6DE069038ECE9BEB504 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A0E6EF328D200BB62C93700A /* ENTRefreshControl.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ENTRefreshControl.podspec; path = ../ENTRefreshControl.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C91BD6DE069038ECE9BEB504 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		D64342E5B43AF03121CC47BB /* Pods_ENTRefreshControl_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ENTRefreshControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 

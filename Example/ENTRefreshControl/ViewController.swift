@@ -20,6 +20,9 @@ class ViewController: UIViewController {
         refControl.loaderView = loadingView
         tableView.addSubview(refControl)
         refControl.addTarget(self, action: #selector(refreshing), for: .valueChanged)
+        
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     @objc func refreshing() {
